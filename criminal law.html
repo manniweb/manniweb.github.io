@@ -1,45 +1,58 @@
 <html>
     <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>
             RandhawaLawyers-ContactUs
         </title>
         <link rel="stylesheet" href="style.css" type="text/css">
-         <style>
-            
-             #header{
+        <style>
+            .backbg{
+              background-image: url("criminal law.jpg");
+              width:100%;
+              height:100vh;
+              filter:blur(2px);
+              
+            }
+        </style>
+        <link rel="stylesheet" href="style.css" type="text/css">
 
-             
-         background-image: url("criminal law.jpg");}
-         </style>
     </head>
     <body>
         <div id="upperguy">
-            <div class="phone"><p>Call us 4378888888</p></div>
+            <div class="phone"><p>Call 4378888888</p></div>
+  
         </div>
      <header id="header">
-        
-         <nav id="nav" role="navigation">
-             <ul class="main-nav">
-                 <li><a href="index.html" title="Home">Home</a></li>
-                 <li><a href="team.html">Meet the Team</a></li>
-                 <li><a href="#">Practise Areas</a>
-                <ul>
-                    <li><a href="criminal law.html">Criminal Laws</a></li>
-                    <li><a href="family law.html">Family Laws</a></li>
-                    <li><a href="personal injury.html">Personal Injury</a></li>
-                    <li><a href="estate.html">Real Estate Law</a></li>
-                    <li><a href="civil.html">Civil litigation </a></li>
-
-                </ul>
-                </li>
-                 <li><a href="testimonials.html">Testimonials</a></li>
-                 <li class="navcontact blue"><a href="contact.html" >Contact Us</a></li>
-             </ul>
-         </nav>
+        <div class="backbg"></div>
+        <nav id="nav" role="navigation">
+            <ul class="main-nav" id="imsmallnav">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="team.html">Meet the Team</a></li>
+                <li><a href="#" class="pp">Practise Areas<p><i class="arrow down"></i></p></a>
+               <ul>
+                   <li><a href="criminal law.html">Criminal Laws</a></li>
+                   <li><a href="family law.html">Family Laws</a></li>
+                   <li><a href="personal injury.html">Personal Injury</a></li>
+                   <li><a href="estate.html">Real Estate Law</a></li>
+                   <li><a href="civil.html">Civil litigation </a></li>
+  
+               </ul>
+               </li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li class="navcontact blue"><a href="contact.html" >Contact Us</a></li>
+            
+            <li class="bused"><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+          </ul>
+        </nav>
+         
+         <div class="mainlogo">
          <div class="reallogo"><img src="logo.png" class="reallogo-img"></div>
          <div class="headerlogo">
              <h1> KARANPAUL|RANDHAWA</h1><span class="headerlogo-1"><h2>-BARRISTER & SOLICTOR-</h2></span></div>
-
+             </div>
+             
         </header>
         <div class="simplecontwork">
             <div class="cont11-1">
@@ -57,6 +70,7 @@
                 </div>
                 
             </div>
+            
             <div class="contactwo1"><a href="contact.html">Contact Us</a></div> 
             
          </div>
@@ -81,5 +95,15 @@
               </div>
               </div>
         </footer>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("imsmallnav");
+              if (x.className === "main-nav") {
+                x.className += " responsive";
+              } else {
+                x.className = "main-nav";
+              }
+            }
+            </script>
         </body>
         </html>
