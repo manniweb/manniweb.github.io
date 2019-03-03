@@ -1289,14 +1289,16 @@ screen and (max-width: 700px) {
   #nav{
       width:100%;
       height:auto;
-      
+      position:fixed;
       z-index:205;
       background: #f5f5f5;
+      top:5%;
       
   }
   #header nav ul ul{
       position: relative;
       display: none;
+      height:auto;
   }
   #header nav .main-nav ul ul li:last-child{
 text-align: center;
@@ -1327,6 +1329,14 @@ text-align: center;
       width:100%;
       height:auto;
       padding:10px;
+
+    }
+    #header nav .main-nav.responsive ul{
+        height:auto;
+
+    }
+    #header nav .main-nav.responsive ul li{
+        height:auto;
 
     }
     #header nav .main-nav.responsive li:last-child{
