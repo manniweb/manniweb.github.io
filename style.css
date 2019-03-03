@@ -1,4 +1,54 @@
-@import url("reset.css");
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+                                /* body coding starts*/
 
 *{
     background-attachment: fixed;
@@ -16,7 +66,8 @@ body{
    background: #ECE9E6;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+;
+overflow: scroll;
 }
 h1{
     text-transform:uppercase;
@@ -27,7 +78,7 @@ h1{
 }
 #upperguy{
     height:30px;
-    width:100%;
+   max-width:100%;
     background: #8360c3;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -35,18 +86,21 @@ background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, F
 }
 .phone{
     height:10px;
-    margin-left:87.8%;   
+    margin-left:85%;   
     padding-top:5px;
-    color:white;
-    
+    color:white;    
 }
-.phone-img{
-    height:20px;
-    width:20px;
-    
-    
-}
+
+
                                                   /*header*/
+
+.backbg:hover{
+ filter:blur(4px);
+  }
+.backbg:hover ~ .mainlogo{
+    transition-duration: 2s;
+    transform: scale(1.2)
+}
 
 #header{
     opacity: 1;
@@ -59,18 +113,28 @@ background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, F
     position:relative;
     overflow: hidden;
 }
+
                                                    /*header logo*/
-.headerlogo{
-    height:auto;
+
+
+.mainlogo{
+    position:absolute;
+    top:27%;
+    left:31%;
+    height:200px;
+}
+  .headerlogo{
+    
     width:450px;
     font-family: Arial, Helvetica, sans-serif;
     
     text-align:center;
-position:absolute;
-left:30%;
-top:30%;
+
 
 padding:10px;
+
+margin-top:-2%;
+
 
 
 }
@@ -87,23 +151,31 @@ padding:10px;
 }
 .reallogo{
     height:100px;
-    width:70px;
-    position:absolute;
-
-    top:21.3%;
-    left:46.1%;
+    width:auto;
+   
     z-index:33;
+   position: relative;
+    
 }
 .reallogo-img{
-    width:100%
+    height:62px;
+    width:65px;
+     position: absolute;
+    left:43.8%;
+    top:37%;
+    
 }
                                                 /*header navigation*/
-
 #nav{
-    position:absolute;
-    top:0%;
+     
+
+
+position:absolute;
+top:0%;
+background: none;
+width:100%;
 }
-                                                .main-nav:hover{
+#nav:hover{
     background: #f5f5f5;
 }
 
@@ -115,8 +187,6 @@ padding:10px;
     width:100%;
 
 z-index:39;
-
-
 
     
 }
@@ -137,23 +207,36 @@ z-index:39;
     margin-left:auto;
     
 }
-.main-nav li a{
+#nav li a{
  
  width: auto;
 }
+.pp{
+    position: relative;
+}
+i {
+    border: solid navy;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position:absolute;
+    top:34%;
+    right:-1%;
+  }
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 
 
-.main-nav li ul {
+#nav li ul {
   border:1px solid transparent;
   color:navy;
  z-index: 39;
 }
-.main-nav ul li:hover{
+#header nav ul li:hover{
     border:1px solid transparent;
 
-}
-.main-nav ul .iconme{
-    border:1px solid red;
 }
 .bused{
     margin-right:0%;
@@ -184,7 +267,7 @@ z-index:39;
     min-width:140px;
     z-index:102;
     visibility: hidden;
-    top:10%;
+    top:100%;
 }
 
 
@@ -198,70 +281,11 @@ z-index:39;
 box-shadow: 0px -3px 17px 4px rgba(238,14,NaN,1);
 }
 
-}
 
+                                                 /*About Page*/
 
-
-
+    
                                                  
-
-  /*  .menu{
-        position: absolute;
-        top:0%;
-        z-index: 22;
-        display: flex;
-        
-        overflow: hidden;
-        width:100%;
-    }
-          
-    .menu div  a{
-        
-  
-        color:navy;
-        display: block;
-        padding:10px 10px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-decoration: none;
-    
-    }
-    .menu >div {
-        padding :10px;
-    }
-    .n2{
-        margin-left:auto;
-    }
-.menu .icon{
-    visibility: hidden;
-}
-.menu .contentyo{
-    
-    background: #f5f5f5;
-    border:1px solid transparent;
-    
-    border-top:0;
-   
-    padding:5px 0;
-    position:absolute;
-    min-width:140px;
-    z-index:102;
-    visibility: hidden;
-    top:60%;
-height:400px;
-}
-
-
-
-
-.dropdown:hover .contentyo{
-    visibility: visible;
-    display: block;
-  }
-*/
-                                /*About Page*/
-
-
     .about-1{
         margin-top:8%;
     }
@@ -288,11 +312,12 @@ height:400px;
     }
     #about p{
         
-        font-size: 1em;
+        font-size: 1.1em;
         font-family: 'Times New Roman', Times, serif;
         
         padding:10px;
         text-align: center;
+        line-height: 1.5em;
     }
 
     .aboutlearn{
@@ -344,12 +369,9 @@ height:400px;
         
         display:grid;
         grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+       margin-bottom:5%;
        
-        
-            
-        
-           
-        margin-bottom:20px;
         
     }
     
@@ -357,38 +379,38 @@ height:400px;
         width:100%;
       background: white;
      overflow: hidden;
+     
+
         
     }
     .boxingimg{
         width:80%;
         height: 100vh;
+        padding-left:9%;
 
     }
     .textbox{
-        font-size: 1em;
         color: black;
-    text-align: center;
-    margin-top:10%;
     overflow: hidden;
     
-
-   
     }
     .textbox h1{
      font-size: 1.6em;
      color:#000040;
-     margin-right:5%;
+     padding-top:9%;
+     text-align: center;
     }
    .textbox p{
     line-height: 1.5em;
     opacity: 0.7;
-    margin-right:5%;
+    text-align: center;
+    margin-right:2%;
    }
     
 .textbox .cover-team{
-        border:1px solid transparent;
+        border:1px solid white;
         margin-top:5%;
-     margin-left:35%;
+     margin-left:38%;
        height:40px;
        width:150px;
        border-radius:20px;
@@ -417,6 +439,8 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
         font-size: 1.3em;
         -webkit-animation: slideInUp 3s linear 1s;
         animation: slideInUp 3s linear 1s ;
+        position: relative;
+        
         }   
         #work:hover{
             -webkit-box-shadow: 0px -4px 18px 0px rgba(5,8,79,0.45);
@@ -433,6 +457,7 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
         .containerw-1{
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows:auto;
             grid-gap: 5px;
             
@@ -442,12 +467,13 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
            
         }
        .widthcontainertocenter{
-            width:67%;
+            width:71%;
             margin:auto;
         }
         .containerw-2{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            
             grid-gap: 5px;
             margin-left:auto;
             
@@ -458,12 +484,6 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
            margin:auto;
            padding-top:10px;  
 
-        }
-        .containerw-2 > div:first-child{
-            
-        }
-        .estate{
-        
         }
         .c1  img{
             width:100%;
@@ -651,11 +671,12 @@ background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
        height:70vh;
        line-height: 1.4em;
 overflow:hidden;
+        width:100%;
     }
 
     .footer1{
         display: flex;
-        height:50%;
+        height:59%;
      
     }
     .footer1 > div{
@@ -696,24 +717,27 @@ overflow:hidden;
        
     }
 .bootom-nav{
+    
     margin-top:9%;
     width:70%;
-    
-    
+
 }
 .bnyo{
     border-top:1px solid black;
-    width:70%;
+    width:75%;
     margin:auto;
     margin-top:2%;
+   
+    
 }
     .bottom-nav1{
         line-height: 1.3em;
         display: flex;
         
-        width:80%;
+        width:85%;
         margin-left:13%;
-        
+     
+       
     }
     .bottom-nav1 > li{
         padding:10px;
@@ -721,21 +745,21 @@ overflow:hidden;
         padding-bottom:0px;
         margin-left:5%;
         
+        width:auto;
+       
+        
     }
     .bottom-nav1 > li a{
         color:white;
+        
     }
-}
+
+/* viewport 960px and below*/
 
 
                                               /* CONTACT PAGE CODING*/
 #contacthere{
-    width:100%;
-    
-    
-    
-   
-    
+    width:100%;   
 }
 .containercontact-11{
     display: grid;
@@ -799,13 +823,25 @@ text-align: center;
     
     color:white;
     
-    height:110vh;
+    height:auto;
     background-color: #2a2a72;
 background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
     
 }
+.registerf > h1{
+    font-size:1.3em;
+    padding-top:3%;
+    text-align: center;
+    color:white;
+    padding-bottom:10px;
+    border-bottom:1px solid white;
+    width:40%;
+    margin-left:29%;
+    line-height: 1.4em;
+
+}
 .imbigform{
-    margin-top:5%;
+    
     padding:10px;
 }
 .imform{
@@ -922,15 +958,17 @@ margin:auto;
     width:80%;
     margin-left:20%;
     color:black;
+   
 }
 .simplecontwork > div:last-child{
-    width:12%;;
+    width:12%;
 }
 .cont11-1{
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap:10px;
   padding:20px;
+ 
 }
 .cont11-1 > div{
     padding:20px;
@@ -978,6 +1016,7 @@ text-align: center;
     border-radius:17px;
     padding:10px;
     margin-left:31%;
+    width:auto;
 }
 .contactwo1 a{
     color:white;
@@ -1043,40 +1082,239 @@ text-align: center;
      margin-left:80%;
      
  }
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+
+                                                           /* media for tablet */
+ @media only screen /*and  (min-width:768px)*/
+ and (max-width: 1024px) 
+ {
+    #upperguy{
+        height: 35px;
+        padding:0;
+        margin:0px;
+        max-width:100%;
+    }
+   #upperguy .phone{
+       margin-left:80%; 
+    }
+   #header{
+    height:auto;    
+    }
+    .backbg{
+        height:60vh;
+    }
+  .mainlogo{
+      top:25%;
+      left:25%;
+  }
+  #header nav ul ul{
+      top:100%;
+  }
+  #about{
+      height:auto;
+  }
+  .about-1{
+      margin-top:5%;
+      margin-bottom:5%;
+  }
+  #about p{
+      padding:5px;
+      font-size: 1.2em;
+      line-height: 1.4em;
+  }
+  #cover{
+      height:auto;
+      margin-bottom: 5%;
+      padding-bottom:1%;
+  }
+  .textbox{
+      padding-bottom:5px;
+  }
+  .boxingimg{
+    height:auto;
+
+  }
+  .textbox .cover-team{
+      margin-left:29%;
+  }
+  #work{
+      height:auto;
+      animation: none;
+      padding-bottom:5%;
+  }
+  .containerw-1{
+      height:auto;
+  }
+  
+
+  .containerw-1{
+      width:67%;
+      margin-left:16%;
+      display: block;
+    
+  }
+  .c1{
+      margin-left:5%;
+      
+  }
+  
+  .containerw-2{
+      display: block;
+      height:auto;
+      margin-left:7%;
+      width:87%;
+      
+      
+  }
+  .containerw-2 > div{
+         padding:7px;
+         margin-bottom:7%;
+         margin-left:3%;
+         
+  }
+  
+  .c1-1{
+      left:35%;
+      top:47%;
+  }
+  #contactdown{
+      animation: none;
+      margin-left:20%;
+      margin-bottom:0;
+      padding-bottom:0;
+      height:auto;
+      margin-bottom:5%;
+  }
+  #footer{
+      height:auto;
+      margin-top:0;
+      padding-top:0;
+  }
+  .footer1{
+    height:auto;
+  }
+  
+  .footer1 > div{
+      padding:0px;
+      height:auto;
+
+     
+  }
+  .bottombox-one p{
+      padding:0;
+  }
+  .footer1 > div:nth-child(2){
+      padding:5px;
+  }
+  .s1{
+      padding:4px;
+      margin-left:1%;
+  }
+  .bootom-nav{
+      width:100%;
+  }
+.bonyo{
+    width:100%;
+    
+}
+  .bottom-nav1{
+      margin-left:4%;
+      width:100%;
+      margin:0;
+  }
+  .bottom-nav1 > li{
+      padding:4px;
+  }
+  
+  .simplecontwork{
+      width:100%;
+     margin:0;
+      height:auto;
+      padding-bottom:5%;
+  }
+  .simplecontwork > div:last-child{
+    width:15%;
+}
+  .contactwo1{
+    
+      margin-top:2%;
+    
+  }
+  .contactwo1 a{
+      margin-left:5%;
+  }
+    /* meet the team */
+  .teamoverview{
+      width:80%;
+      margin:10%;
+      height:auto;
+  }
+  .teammembers{
+      height:auto;
+      margin-bottom:5%;
+  }
+    /* testimonials */
+  .testii{
+      width:80%;
+      height: auto;
+      margin-left:10%;
+
+  }
+  .reviewyob{
+      margin-left:35%;
+  }
+  .reviewsection > div{
+      height:auto;
+  }
+       /* Contact page */
+  .containercontact-11{
+      height:auto;
+  }
+  .registerf{
+      height:auto;
+  }
+ } 
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media  only
+screen and (max-width: 700px) {
     .main-nav li{
       display: none;
     }
     .main-nav li:last-child {
-      float:right;
+     
       display: block;
       margin-left:0%;
+      
     }
-  }
+  
   #nav{
       width:100%;
       height:auto;
-      background: #f5f5f5;
+      position:fixed;
       z-index:205;
-      position: fixed;
+      background: #f5f5f5;
+      top:5%;
+      
   }
   #header nav ul ul{
       position: relative;
       display: none;
+      height:auto;
   }
   #header nav .main-nav ul ul li:last-child{
 text-align: center;
   }
+}
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
     #header nav .main-nav.responsive 
     {position: relative;
     display: block;
     width:100%;
     text-align: center;
     height:auto; 
+   
+    
 }
 
     #header nav .main-nav.responsive .bused {
@@ -1093,9 +1331,20 @@ text-align: center;
       padding:10px;
 
     }
+    #header nav .main-nav.responsive ul{
+        height:auto;
+
+    }
+    #header nav .main-nav.responsive ul li{
+        height:auto;
+
+    }
     #header nav .main-nav.responsive li:last-child{
 text-align:left;
 margin-left:5%;
+margin-bottom:5%;
+height: auto;
+width:auto;
     }
     #header nav .main-nav.responsive ul {
     height:auto;}
@@ -1110,3 +1359,753 @@ margin-left:5%;
         display: block;
     }
   }
+                                         /*media for phones*/
+ @media only screen
+
+and (max-width :480px) {
+
+    #upperguy{
+        height: 35px;
+        padding:0;
+        margin:0px;
+        max-width:100%;
+    }
+   #upperguy .phone{
+       margin-left:65%; 
+    }
+   #header{
+    height:auto;    
+    }
+    .backbg{
+        height:50vh;
+    }
+  .mainlogo{
+      top:20%;
+      left:-1%;
+      
+      overflow: hidden;
+  }
+  .headerlogo{
+      padding:0;
+      
+  }
+  .headerlogo h1{
+    font-size: 2em;
+    padding:0;
+    
+}
+.reallogo-img{
+    top:33%;
+    
+}
+.backbg:hover ~ .mainlogo{
+    
+    transform: none;
+}
+  #header nav ul ul{
+      top:100%;
+  }
+  #about{
+      height:auto;
+  }
+  .about-1{
+      margin-top:5%;
+      margin-bottom:5%;
+  }
+  #about p{
+      padding:6px;
+      font-size: 1.1em;
+      line-height: 1.2em;
+      padding-bottom:5%;
+  }
+  #cover{
+      height:auto;
+      margin-bottom: 5%;
+      padding-bottom:1%;
+      
+  }
+  .boxing{
+    display: block;
+  }
+  .boxingimg{
+      
+    padding-top:5%;
+  height:auto;
+  padding-bottom:9%;
+
+}
+  .textbox{
+      padding-bottom:5px;
+      
+  }
+ .textbox h1{
+     width:70%;
+     border-top:1px solid;
+     margin-left:15%;
+ }
+ .textbox p{
+    line-height: 1.3em;
+    
+    font-size: 1.1em;
+    padding:4px;
+   }
+  .textbox .cover-team{
+      margin-left:29%;
+  }
+  #work{
+      height:auto;
+      animation: none;
+      padding-bottom:5%;
+  }
+  .containerw-1{
+      height:auto;
+  }
+  
+
+  .containerw-1{
+      width:100%;
+      margin-left:-1%;
+      display: block;
+     
+    
+  }
+  .containerw-1> div{
+    padding:0px;
+    padding-bottom:20px;   
+    
+
+    
+ }
+  .widthcontainertocenter{
+    width:100%;
+    margin:0;
+    
+}
+  
+  .containerw-2{
+      display: block;
+      height:auto;
+      margin-left:3.6%;
+      width:95%;
+      
+      overflow:hidden;
+      margin-top:2%;
+
+      
+  }
+  .containerw-2 > div{
+         
+         margin-bottom:7%;
+         margin-left:0;
+         
+         padding:0;
+         
+  }
+  
+  .c1-1{
+      left:35%;
+      top:47%;
+  }
+  .civildiv{
+      left:40%;
+  }
+  #contactdown{
+      animation: none;
+      margin-left:0%;
+      margin-bottom:0;
+      padding-bottom:0;
+      height:auto;
+      margin-bottom:9%;
+      width:100%;
+  }
+  .contacthome1-1 p{
+      font-size: 1.2em;
+  }
+  #footer{
+      height:auto;
+      margin-top:0;
+      padding-top:0;
+      
+  }
+  .footer1{
+    height:auto;
+    display:block;
+  }
+  
+  .footer1 > div{
+      padding:0px;
+      height:auto;
+
+     
+  }
+  .bottombox-one p{
+      padding:0;
+  }
+  .bottombox-one p:last-child{
+      width:50%;
+      margin-left:25%;
+    border-bottom:1px solid black;
+    padding-bottom:2%;
+    
+}
+
+.footerlogo h2{
+    width:58%;
+    margin-left:22%;
+    border-bottom:1px solid black;
+    padding-bottom:2%;
+   
+}
+.bottom-socialmedia{
+    margin:0;
+    padding:0;
+    margin-left:22%;
+}
+  .s1{
+      padding:4px;
+      margin-left:1%;
+  }
+  .bootom-nav{
+      width:100%;
+  }
+.bonyo{
+    width:100%;
+    
+}
+  .bottom-nav1{
+      
+      width:100%;
+      margin:0;
+      display:block;
+      text-align: center;
+
+     
+  }
+  .bottom-nav1 > li{
+      padding:2px;
+      font-size: 0.9em;
+      margin-left:0;
+  }
+  
+
+  .contactwo1{
+    
+      margin-top:2%;
+    
+  }
+  .contactwo1 a{
+      margin-left:5%;
+  }
+    /* meet the team */
+  .teamoverview{
+      width:90%;
+      margin-left:1%;
+      height:auto;
+  }
+  .teamoverview h1{
+      padding:5px;
+  }
+  .teamoverview p{
+      margin-left:-1%;
+      padding:10px;
+      font-size: 1.3em;
+      padding-bottom:5%;
+  }
+  .teammembers{
+      height:auto;
+      margin-bottom:5%;
+  }
+  .members-1{
+      display: block;
+  }
+    /* testimonials */
+  .testii{
+      width:100%;
+      height: auto;
+      margin-left:0%;
+      padding:5px;
+
+  }
+  .reviewyob{
+      margin-left:35%;
+  }
+  .reviewsection{
+      width:95%;
+      margin-left:0;
+      padding:0;
+  }
+  .reviewsection  .r1{
+      height:auto;
+      width:100%;
+      margin-bottom:20px;
+      padding:0px;
+      
+      display:block;
+  }
+  .r1 img{
+      margin-left:33%;
+  }
+  .r1 p{
+   margin-bottom:3%;
+   width:80%;
+
+}
+  .r1 p span{
+     
+    margin-left:70%;
+    
+}
+       /* Contact page */
+  .containercontact-11{
+      height:auto;
+      display: block;
+  }
+  .containerdetail {
+    margin:10px;
+   
+   }
+   .containerdetail h1{
+       font-size: 1.5em;
+       line-height: 1.3em;
+
+   }
+   .containerdetail p{
+       line-height: 1.3em;
+       padding:5px;
+       font-size: 1.1em;
+       width:100%;
+       margin-top:10px;
+       opacity: 0.7;
+   }
+   
+  .containeradd h1{
+    padding:10px;
+    border:none;
+    border-top:1px solid;
+    padding-top:5%;
+    margin-top:5px;
+    
+}
+.containeradd p{
+    border:none;
+}
+  .registerf{
+      height:auto;
+  }
+ 
+  .contrb{
+    
+    margin-left:20%;
+    
+}
+                      /*Work page*/
+.simplecontwork{
+    width:100%;
+   margin:0;
+    height:auto;
+    padding-bottom:5%;
+}
+.simplecontwork > div:last-child{
+  width:50%;
+margin-left:25%;
+
+
+}
+.cont11-1{
+    display: block;
+    
+  }
+  .cont11-1-2{
+    border-left:none;
+text-align: center;
+}
+.cont11-1-2 h1{
+    font-size: 1.3em;
+    padding:20px;
+    border-top:1px solid black;
+
+}
+.contactwo1 a{
+    color:white;
+    font-size: 1.5em;
+    margin-left:22%;
+   
+}
+
+}
+
+@media only screen and (max-width :650px)
+
+ {
+
+    #upperguy{
+        height: 35px;
+        padding:0;
+        margin:0px;
+        max-width:100%;
+    }
+   #upperguy .phone{
+       margin-left:40%; 
+    }
+   #header{
+    height:auto;    
+    }
+    .backbg{
+        height:50vh;
+    }
+  .mainlogo{
+      top:20%;
+      left:-1%;
+      
+      overflow: hidden;
+
+  }
+  .headerlogo{
+      padding:0;
+      
+  }
+  .headerlogo h1{
+    font-size: 1.5em;
+    padding:0;
+    
+}
+.reallogo-img{
+    top:33%;
+    
+}
+.backbg:hover ~ .mainlogo{
+    
+    transform: none;
+}
+  #header nav ul ul{
+      top:100%;
+  }
+  #about{
+      height:auto;
+  }
+  .about-1{
+      margin-top:5%;
+      margin-bottom:5%;
+  }
+  #about p{
+      padding:6px;
+      font-size: 1.1em;
+      line-height: 1.2em;
+      padding-bottom:5%;
+  }
+  #cover{
+      height:auto;
+      margin-bottom: 5%;
+      padding-bottom:1%;
+      
+  }
+  .boxing{
+    display: block;
+  }
+  .boxingimg{
+      
+    padding-top:5%;
+  height:auto;
+  padding-bottom:9%;
+
+}
+  .textbox{
+      padding-bottom:5px;
+      
+  }
+ .textbox h1{
+     width:70%;
+     border-top:1px solid;
+     margin-left:15%;
+ }
+ .textbox p{
+    line-height: 1.3em;
+    
+    font-size: 1.1em;
+    padding:4px;
+   }
+  .textbox .cover-team{
+      margin-left:29%;
+  }
+  #work{
+      height:auto;
+      animation: none;
+      padding-bottom:5%;
+  }
+  .containerw-1{
+      height:auto;
+  }
+  
+
+  .containerw-1{
+      width:100%;
+      margin-left:-1%;
+      display: block;
+     
+    
+  }
+  .containerw-1> div{
+    padding:0px;
+    padding-bottom:20px;   
+    
+
+    
+ }
+  .widthcontainertocenter{
+    width:100%;
+    margin:0;
+    
+}
+  
+  .containerw-2{
+      display: block;
+      height:auto;
+      margin-left:3.6%;
+      width:95%;
+      
+      overflow:hidden;
+      margin-top:2%;
+
+      
+  }
+  .containerw-2 > div{
+         
+         margin-bottom:7%;
+         margin-left:0;
+         
+         padding:0;
+         
+  }
+  
+  .c1-1{
+      left:35%;
+      top:47%;
+  }
+  .civildiv{
+      left:40%;
+  }
+  #contactdown{
+      animation: none;
+      margin-left:0%;
+      margin-bottom:0;
+      padding-bottom:0;
+      height:auto;
+      margin-bottom:9%;
+      width:100%;
+  }
+  .contacthome1-1 p{
+      font-size: 1.2em;
+  }
+  #footer{
+      height:auto;
+      margin-top:0;
+      padding-top:0;
+      
+  }
+  .footer1{
+    height:auto;
+    display:block;
+  }
+  
+  .footer1 > div{
+      padding:0px;
+      height:auto;
+
+     
+  }
+  .bottombox-one p{
+      padding:0;
+  }
+  .bottombox-one p:last-child{
+      width:50%;
+      margin-left:25%;
+    border-bottom:1px solid black;
+    padding-bottom:2%;
+    
+}
+
+.footerlogo h2{
+    width:58%;
+    margin-left:22%;
+    border-bottom:1px solid black;
+    padding-bottom:2%;
+   
+}
+.bottom-socialmedia{
+    margin:0;
+    padding:0;
+    margin-left:22%;
+}
+  .s1{
+      padding:4px;
+      margin-left:1%;
+  }
+  .bootom-nav{
+      width:100%;
+  }
+.bonyo{
+    width:100%;
+    
+}
+  .bottom-nav1{
+      
+      width:100%;
+      margin:0;
+      display:block;
+      text-align: center;
+
+     
+  }
+  .bottom-nav1 > li{
+      padding:2px;
+      font-size: 0.9em;
+      margin-left:0;
+  }
+  
+
+  .contactwo1{
+    
+      margin-top:2%;
+    
+  }
+  .contactwo1 a{
+      margin-left:5%;
+  }
+    /* meet the team */
+  .teamoverview{
+      width:90%;
+      margin-left:1%;
+      height:auto;
+  }
+  .teamoverview h1{
+      padding:5px;
+  }
+  .teamoverview p{
+      margin-left:-1%;
+      padding:10px;
+      font-size: 1.3em;
+      padding-bottom:5%;
+  }
+  .teammembers{
+      height:auto;
+      margin-bottom:5%;
+  }
+  .members-1{
+      display: block;
+  }
+    /* testimonials */
+  .testii{
+      width:100%;
+      height: auto;
+      margin-left:0%;
+      padding:5px;
+
+  }
+  .reviewyob{
+      margin-left:35%;
+  }
+  .reviewsection{
+      width:95%;
+      margin-left:0;
+      padding:0;
+  }
+  .reviewsection  .r1{
+      height:auto;
+      width:100%;
+      margin-bottom:20px;
+      padding:0px;
+      
+      display:block;
+  }
+  .r1 img{
+      margin-left:33%;
+  }
+  .r1 p{
+   margin-bottom:3%;
+   width:80%;
+
+}
+  .r1 p span{
+     
+    margin-left:70%;
+    
+}
+       /* Contact page */
+  .containercontact-11{
+      height:auto;
+      display: block;
+  }
+  .containerdetail {
+    margin:10px;
+   
+   }
+   .containerdetail h1{
+       font-size: 1.5em;
+       line-height: 1.3em;
+
+   }
+   .containerdetail p{
+       line-height: 1.3em;
+       padding:5px;
+       font-size: 1.1em;
+       width:100%;
+       margin-top:10px;
+       opacity: 0.7;
+   }
+   
+  .containeradd h1{
+    padding:10px;
+    border:none;
+    border-top:1px solid;
+    padding-top:5%;
+    margin-top:5px;
+    
+}
+.containeradd p{
+    border:none;
+}
+  .registerf{
+      height:auto;
+  }
+ 
+  .contrb{
+    
+    margin-left:20%;
+    
+}
+                      /*Work page*/
+.simplecontwork{
+    width:100%;
+   margin:0;
+    height:auto;
+    padding-bottom:5%;
+}
+.simplecontwork > div:last-child{
+  width:50%;
+margin-left:25%;
+
+
+}
+.cont11-1{
+    display: block;
+    
+  }
+  .cont11-1-2{
+    border-left:none;
+text-align: center;
+}
+.cont11-1-2 h1{
+    font-size: 1.3em;
+    padding:20px;
+    border-top:1px solid black;
+
+}
+.contactwo1 a{
+    color:white;
+    font-size: 1.5em;
+    margin-left:22%;
+   
+}
+
+}
+
