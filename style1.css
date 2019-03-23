@@ -397,7 +397,7 @@ box-shadow: 0px -3px 17px 4px rgba(238,14,NaN,1);
     .boxing{
         
         display:-ms-grid;
-        
+        display:-webkit-grid;            
         display:grid;
         -ms-grid-columns: 1fr 10px 1fr;
         grid-template-columns: 1fr 1fr;
@@ -490,6 +490,7 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
         }
         .containerw-1{
             display: -ms-grid;
+            display:-webkit-grid;  
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
             -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
@@ -524,6 +525,7 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
         }
         .containerw-2{
             display: -ms-grid;
+            display:-webkit-grid;  
             display: grid;
             -ms-grid-columns: 1fr 5px 1fr;
             grid-template-columns: 1fr 1fr;
@@ -616,6 +618,7 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
        }
        .contacthome1{
            display:-ms-grid;
+           display:-webkit-grid;  
            display:grid;
            -ms-grid-columns: 1fr;
            grid-template-columns: 1fr;
@@ -745,6 +748,7 @@ overflow:hidden;
     .footer1{
         display: -webkit-box;
         display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         height:59%;
      
@@ -752,6 +756,7 @@ overflow:hidden;
     .footer1 > div{
         -webkit-box-flex:1;
             -ms-flex:1;
+      -webkit-flex:1;
                 flex:1;
         padding:10px;
         margin-top:5%;
@@ -838,6 +843,7 @@ overflow:hidden;
     width:100%;   
 }
 .containercontact-11{
+   display: -webkit-grid;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 2fr 1fr;
@@ -1397,7 +1403,7 @@ text-align: center;
 }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 739px) {
     #header nav .main-nav.responsive 
     {position: relative;
     display: block;
@@ -1849,12 +1855,20 @@ text-align: center;
     }
     .backbg{
         height:50vh;
+        -o-background-size: 100% 90%;
+  -moz-background-size: 100% 90%;
+  -webkit-background-size: 100% 90%;
+  background-size: 100% 90%;
+    
+
+        
     }
   .mainlogo{
       
       position: absolute;
       overflow: hidden;
       left:-8%;
+      margin:auto;
   }
   .headerlogo{
       padding:0;
