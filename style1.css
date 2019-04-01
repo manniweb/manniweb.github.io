@@ -393,16 +393,20 @@ box-shadow: 0px -3px 17px 4px rgba(238,14,NaN,1);
         box-shadow: 0px -4px 18px 0px rgba(5,8,79,0.45);
         
     }
-    
+    .boxing{
+      display:flex;
+
+    }
     .boxing{
         
         display:-ms-grid;
-        display:-webkit-grid;            
+        display:-webkit-grid;
         display:grid;
         -ms-grid-columns: 1fr 10px 1fr;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
        margin-bottom:5%;
+
        
         
     }
@@ -489,8 +493,11 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         .containerw-1{
+          display:flex;
+
+        }
+        .containerw-1{
             display: -ms-grid;
-            display:-webkit-grid;  
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
             -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
@@ -501,16 +508,19 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
             
         }
         .containerw-1 > *:nth-child(1){
+          flex:1;
 	-ms-grid-row: 1;
 	-ms-grid-column: 1;
             
         }
         .containerw-1 > *:nth-child(2){
+           flex:1;
 	-ms-grid-row: 1;
 	-ms-grid-column: 3;
             
         }
         .containerw-1 > *:nth-child(3){
+           flex:1;
 	-ms-grid-row: 1;
 	-ms-grid-column: 5;
             
@@ -524,8 +534,14 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
             margin:auto;
         }
         .containerw-2{
+          display: flex;
+         
+         
+        } .containerw-2> div{
+          flex:1;
+        }
+        .containerw-2{
             display: -ms-grid;
-            display:-webkit-grid;  
             display: grid;
             -ms-grid-columns: 1fr 5px 1fr;
             grid-template-columns: 1fr 1fr;
@@ -618,7 +634,6 @@ background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, F
        }
        .contacthome1{
            display:-ms-grid;
-           display:-webkit-grid;  
            display:grid;
            -ms-grid-columns: 1fr;
            grid-template-columns: 1fr;
@@ -748,7 +763,6 @@ overflow:hidden;
     .footer1{
         display: -webkit-box;
         display: -ms-flexbox;
-        display: -webkit-flex;
         display: flex;
         height:59%;
      
@@ -756,7 +770,6 @@ overflow:hidden;
     .footer1 > div{
         -webkit-box-flex:1;
             -ms-flex:1;
-      -webkit-flex:1;
                 flex:1;
         padding:10px;
         margin-top:5%;
@@ -843,7 +856,15 @@ overflow:hidden;
     width:100%;   
 }
 .containercontact-11{
-   display: -webkit-grid;
+  display:flex;
+}
+.containercontact-11:first-child{
+  flex:2;
+}
+.containercontact-11:last-child{
+  flex:1;
+}
+.containercontact-11{
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 2fr 1fr;
@@ -1007,6 +1028,11 @@ border-top:1px solid black;
 padding-top:80px;
 
 
+}.members-1{
+  display:flex;
+}
+.members-1 >div{
+  flex:1;
 }
 .members-1{
     display: -ms-grid;
@@ -1053,6 +1079,18 @@ margin:auto;
 }
 .simplecontwork > div:last-child{
     width:12%;
+}
+.cont11-1{
+  display:flex;
+
+}
+.cont11-1 > div:first-child{
+  flex:3;
+
+}
+.cont11-1 > div:last-child{
+  flex:1;
+
 }
 .cont11-1{
   display: -ms-grid;
@@ -1403,7 +1441,7 @@ text-align: center;
 }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media only screen and (max-width: 739px) {
+  @media only screen and (max-width: 700px) {
     #header nav .main-nav.responsive 
     {position: relative;
     display: block;
@@ -1855,20 +1893,12 @@ text-align: center;
     }
     .backbg{
         height:50vh;
-        -o-background-size: 100% 90%;
-  -moz-background-size: 100% 90%;
-  -webkit-background-size: 100% 90%;
-  background-size: 100% 90%;
-    
-
-        
     }
   .mainlogo{
       
       position: absolute;
       overflow: hidden;
       left:-8%;
-      margin:auto;
   }
   .headerlogo{
       padding:0;
